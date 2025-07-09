@@ -17,7 +17,8 @@ const db = admin.firestore();
 // --- สิ้นสุดส่วนการเชื่อมต่อ ---
 
 // === กำหนด ID ร้านค้า (สำหรับร้านแรก) ===
-const STORE_ID = 'laundry_1';
+// *** แก้ไขตรงนี้: เปลี่ยนจาก 'laundry_1' เป็น 'laundry_2' ***
+const STORE_ID = 'laundry_2';
 
 // กำหนด Type สำหรับ Quick Reply Item เพื่อความถูกต้องของ TypeScript
 interface QuickReplyAction {
@@ -64,7 +65,7 @@ const messageTemplatesMap = new Map<string, string>();
 
 // ฟังก์ชันสำหรับดึงข้อความจาก Firebase Firestore
 async function fetchMessagesFromFirestore(storeId: string): Promise<void> {
-    
+
     // ล้างค่าเก่าและดึงใหม่เสมอเพื่อให้ได้ข้อมูลล่าสุด
     messageTemplatesMap.clear();
 
